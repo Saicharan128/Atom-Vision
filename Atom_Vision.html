@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atom Vision</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif;
+        }
+
+        :root {
+            --primary: white;
+            --bg-dark: transparent;
+            --bg-darker: transparent;
+            --text: #ffffff;
+        }
+
+        body {
+            background: var(--bg-dark);
+            backdrop-filter: blur(20px);
+            color: var(--text);
+        }
+
+        .navbar {
+            background: var(--bg-darker);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar h1 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .settings-btn {
+            margin-left: auto;
+            background: var(--primary);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s;
+        }
+
+        .settings-btn:hover {
+            opacity: 0.9;
+        }
+
+        .main-container {
+            display: flex;
+            padding-top: 60px;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: var(--bg-darker);
+            padding: 1rem;
+            overflow-y: auto;
+            height: calc(100vh - 60px);
+            position: fixed;
+        }
+
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .accordion-section {
+            margin-bottom: 1rem;
+        }
+
+        .accordion-header {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .toggle-item {
+            padding: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #444;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: var(--primary);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        .live-feed {
+            background: var(--bg-darker);
+            height: 400px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .log-panel {
+            background: var(--bg-darker);
+            padding: 1rem;
+            border-radius: 8px;
+            height: calc(100vh - 500px);
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .log-entry {
+            padding: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .log-entry-text {
+            flex-grow: 1;
+        }
+
+        .view-screenshot {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--primary);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+
+        .view-screenshot:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .uniform-settings {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 0.5rem 0 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .uniform-settings label {
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .uniform-settings input[type="file"] {
+            color: #ccc;
+        }
+
+        .uniform-settings button {
+            background: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .uniform-settings input[type="range"] {
+            width: 100%;
+        }
+
+        /* Modal styles - improved version */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #1e1e2e;
+            color: var(--text);
+            margin: 10% auto;
+            padding: 24px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .close-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-body {
+            margin-bottom: 24px;
+        }
+
+        .modal-body p {
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-footer button {
+            background: var(--primary);
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .modal-footer button:hover {
+            opacity: 0.9;
+        }
+
+        .modal-footer button.cancel {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+        }
+
+        .folder-input {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .input-group .info-text {
+            font-size: 12px;
+            color: #8a8a9a;
+            margin-top: 4px;
+        }
+
+        .folder-input input {
+            padding: 12px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .folder-input input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .folder-input button {
+            padding: 12px;
+            background: var(--primary);
+            border: none;
+            color: #000;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .folder-input button:hover {
+            opacity: 0.9;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: calc(100vh - 110px);
+                position: relative;
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+                display: block;
+            }
+
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                background: black;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                justify-content: space-around;
+                align-items: center;
+                z-index: 100;
+                backdrop-filter: blur(10px);
+            }
+
+            .mobile-nav-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #a0a0a0;
+                text-decoration: none;
+                font-size: 0.8rem;
+                width: 50%;
+                height: 100%;
+                transition: 0.2s;
+            }
+
+            .mobile-nav-item.active {
+                color: var(--primary);
+                border-top: 2px solid var(--primary);
+                background: rgba(255, 255, 255, 0.05);
+            }
+
+            .live-feed {
+                height: 300px;
+            }
+
+            .log-panel {
+                height: calc(100vh - 410px);
+            }
+
+            .mobile-hidden {
+                display: none;
+            }
+
+            .mobile-visible {
+                display: block;
+            }
+        }
+
+        .uniform-settings {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 0.5rem 1rem 1rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: none;
+            flex-direction: column;
+            gap: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .uniform-settings>div {
+            padding: 0.5rem 0;
+        }
+
+        .uniform-settings label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .uniform-settings input[type="file"] {
+            width: 100%;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .uniform-settings input[type="file"]:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .uniform-settings button {
+            background: var(--primary);
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            color: #000;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .uniform-settings button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .uniform-settings input[type="range"] {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .uniform-settings input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .uniform-settings input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        .uniform-settings .info-text {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+
+        .uniform-settings .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .uniform-settings .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Log Filter styles */
+        .log-filter {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .log-filter label {
+            margin-right: 0.5rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .log-filter select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            color: var(--text);
+            padding: 0.4rem 0.8rem;
+            outline: none;
+        }
+
+        .log-filter button {
+            background: var(--primary);
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            color: #000;
+            cursor: pointer;
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+        .log-filter button:hover {
+            opacity: 0.9;
+        }
+
+        /* Screenshot modal styles */
+        .screenshot-modal .modal-content {
+            max-width: 80%;
+        }
+
+        .screenshot-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .screenshot-info {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Atom Vision</h1>
+        <button class="settings-btn" onclick="openSettingsModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+            </svg>
+        </button>
+    </nav>
+    <div class="main-container">
+        <div class="sidebar" id="sidebar">
+            <!-- Accordion sections added dynamically via JS -->
+        </div>
+        <div class="main-content" id="mainContent">
+            <div class="live-feed"> Live Camera Feed </div>
+            <div class="log-filter">
+                <label for="filterCategory">Filter by:</label>
+                <select id="filterCategory">
+                    <option value="all">All Logs</option>
+                    <!-- Categories will be added dynamically -->
+                </select>
+                <button onclick="clearFilters()">Clear Filters</button>
+            </div>
+            <div class="log-panel" id="logPanel">
+                <!-- Log entries added dynamically -->
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#" class="mobile-nav-item active" id="feedBtn" onclick="switchMobileView('mainContent')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="16" y1="5" x2="19" y2="8"></line>
+            </svg> Feed </a>
+        <a href="#" class="mobile-nav-item" id="controlsBtn" onclick="switchMobileView('sidebar')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg> Controls </a>
+    </div>
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="close-btn" onclick="closeSettingsModal()">X</button>
+            </div>
+            <div class="modal-body">
+                <p>Subscription Status: Active</p>
+                <div class="folder-input">
+                    <div class="input-group">
+                        <label for="logFolder">Log Folder Path</label>
+                        <input type="text" id="logFolder" placeholder="e.g., C:/AtomVision/logs" />
+                        <div class="info-text">Specify the directory where log files will be stored</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="logName">Log File Name</label>
+                        <input type="text" id="logName" placeholder="e.g., detection_logs" />
+                        <div class="info-text">Name of the log file without extension (.log will be added automatically)
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="screenshotFolder">Screenshot Folder Path</label>
+                        <input type="text" id="screenshotFolder" placeholder="e.g., C:/AtomVision/screenshots" />
+                        <div class="info-text">Specify the directory where detection screenshots will be saved</div>
+                    </div>
+                    <button onclick="saveLogSettings()">Save Settings</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel" onclick="closeSettingsModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- Screenshot Modal -->
+    <div id="screenshotModal" class="modal screenshot-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Detection Screenshot</h2>
+                <button class="close-btn" onclick="closeScreenshotModal()">X</button>
+            </div>
+            <div class="modal-body">
+                <div id="screenshotInfo" class="screenshot-info"></div>
+                <img id="screenshotImage" class="screenshot-image" src="" alt="Detection screenshot">
+            </div>
+            <div class="modal-footer">
+                <button class="cancel" onclick="closeScreenshotModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const sidebarData = {
+            'Compliance & Uniform': ['Mask Detection', 'Uniform Check', 'Apron Detection', 'ID Badge Visibility', 'Shoe Cover Check'],
+            'Security': ['Loitering Detection', 'Unusual Movement', 'Object Left Behind', 'Weapon-Like Object', 'Face Not Recognized', 'Perimeter Breach Detection'],
+            'Crowd & Behavior': ['Crowd Density Zone', 'Queue Detection', 'Aggressive Posture', 'Falling Detection'],
+            'Environment & Motion': ['Lights Off Detection', 'Door Open/Close Monitor'],
+            'Threat & Safety Detection': ['Explosion Detection', 'Commotion Detection', 'Inappropriate Behavior Detection', 'Fire/Smoke Detection', 'Panic Behavior Detection']
+        };
+        const sidebar = document.getElementById('sidebar');
+        const logPanel = document.getElementById('logPanel');
+        const intervals = {};
+        const filterSelect = document.getElementById('filterCategory');
+        const allLogs = [];
+        // Populate filter dropdown with categories
+        function populateFilterOptions() {
+            // Add all features to the filter dropdown
+            Object.entries(sidebarData).forEach(([category, items]) => {
+                items.forEach(item => {
+                    const option = document.createElement('option');
+                    option.value = item.toLowerCase().replace(/\s+/g, '-');
+                    option.textContent = item;
+                    filterSelect.appendChild(option);
+                });
+            });
+        }
+        // Filter logs based on selected category
+        function filterLogs() {
+            const filterValue = filterSelect.value;
+            const logs = document.querySelectorAll('.log-entry');
+            logs.forEach(log => {
+                if (filterValue === 'all' || log.dataset.feature === filterValue) {
+                    log.style.display = 'flex';
+                } else {
+                    log.style.display = 'none';
+                }
+            });
+        }
+        // Clear filters
+        function clearFilters() {
+            filterSelect.value = 'all';
+            filterLogs();
+        }
+        // Check if mobile device
+        function isMobile() {
+            return window.innerWidth <= 768;
+        }
+        // Initialize mobile view
+        function initializeMobileView() {
+            if (isMobile()) {
+                document.getElementById('mainContent').classList.add('mobile-visible');
+                document.getElementById('sidebar').classList.add('mobile-hidden');
+                document.getElementById('mobileNav').style.display = 'flex';
+            } else {
+                document.getElementById('mainContent').classList.remove('mobile-visible', 'mobile-hidden');
+                document.getElementById('sidebar').classList.remove('mobile-visible', 'mobile-hidden');
+                document.getElementById('mobileNav').style.display = 'none';
+            }
+        }
+        // Switch between views on mobile
+        function switchMobileView(viewId) {
+            if (viewId === 'sidebar') {
+                document.getElementById('sidebar').classList.remove('mobile-hidden');
+                document.getElementById('sidebar').classList.add('mobile-visible');
+                document.getElementById('mainContent').classList.remove('mobile-visible');
+                document.getElementById('mainContent').classList.add('mobile-hidden');
+                document.getElementById('controlsBtn').classList.add('active');
+                document.getElementById('feedBtn').classList.remove('active');
+            } else {
+                document.getElementById('mainContent').classList.remove('mobile-hidden');
+                document.getElementById('mainContent').classList.add('mobile-visible');
+                document.getElementById('sidebar').classList.remove('mobile-visible');
+                document.getElementById('sidebar').classList.add('mobile-hidden');
+                document.getElementById('feedBtn').classList.add('active');
+                document.getElementById('controlsBtn').classList.remove('active');
+            }
+        }
+        // Open screenshot modal
+        function openScreenshotModal(feature, timestamp) {
+            const modal = document.getElementById('screenshotModal');
+            const info = document.getElementById('screenshotInfo');
+            const img = document.getElementById('screenshotImage');
+            // In a real application, this would fetch the actual screenshot
+            // For demonstration, we're using placeholder images
+            img.src = `https://picsum.photos/800/600?random=${Math.floor(Math.random() * 100)}`;
+            info.textContent = `${feature.replace(/-/g, ' ')} - ${timestamp}`;
+            modal.style.display = 'block';
+        }
+        // Close screenshot modal
+        function closeScreenshotModal() {
+            document.getElementById('screenshotModal').style.display = 'none';
+        }
+        // Create sidebar structure
+        Object.entries(sidebarData).forEach(([category, items]) => {
+            const section = document.createElement('div');
+            section.className = 'accordion-section';
+            section.innerHTML = `
+			 
+			         
+						<div class="accordion-header">${category}</div>
+						<div class="accordion-content">
+			 
+			             ${items.map(item => {
+
+                const id = item.toLowerCase().replace(/\s+/g, '-');
+
+                return `
+			 
+			                     
+							<div class="toggle-item">
+								<span>${item}</span>
+								<label class="switch">
+									<input type="checkbox" data-feature="${id}" id="toggle-${id}">
+										<span class="slider"></span>
+									</label>
+								</div>
+			 
+			                     ${item === 'Uniform Check' ? `
+			 
+			                         
+								<div class="uniform-settings" id="uniform-settings">
+									<div>
+										<label for="uniform-upload">Upload Reference Uniform Image</label>
+										<input type="file" id="uniform-upload" accept="image/*">
+										</div>
+										<div>
+											<label>Mark Logo Area (Optional)</label>
+											<button>Crop Area</button>
+										</div>
+										<div>
+											<label for="color-sensitivity">Color Match Strictness</label>
+											<input type="range" id="color-sensitivity" min="1" max="10">
+											</div>
+										</div>
+			 
+			                     ` : ''}
+			 
+			                     ${item === 'Inappropriate Behavior Detection' ? `
+			 
+			                         
+										<div class="uniform-settings" id="inappropriate-behavior-settings">
+											<div>
+												<label for="behavior-sensitivity">Detection Sensitivity</label>
+												<input type="range" id="behavior-sensitivity" min="1" max="10" value="7">
+												</div>
+												<div>
+													<label>Detection Categories</label>
+													<div style="margin-top: 8px;">
+														<input type="checkbox" id="detect-sexual" checked>
+															<label for="detect-sexual">Sexual Behavior</label>
+														</div>
+														<div>
+															<input type="checkbox" id="detect-fighting" checked>
+																<label for="detect-fighting">Fighting/Violence</label>
+															</div>
+															<div>
+																<input type="checkbox" id="detect-substance" checked>
+																	<label for="detect-substance">Substance Use</label>
+																</div>
+															</div>
+														</div>
+			 
+			                     ` : ''}
+			 
+			                     ${item === 'Explosion Detection' || item === 'Commotion Detection' ? `
+			 
+			                         
+														<div class="uniform-settings" id="${id}-settings">
+															<div>
+																<label for="${id}-sensitivity">Detection Sensitivity</label>
+																<input type="range" id="${id}-sensitivity" min="1" max="10" value="6">
+																</div>
+																<div>
+																	<label for="${id}-threshold">Alert Threshold</label>
+																	<input type="range" id="${id}-threshold" min="1" max="10" value="5">
+																		<div class="info-text">Higher values reduce false positives but may delay detection</div>
+																	</div>
+																</div>
+			 
+			                     ` : ''}
+			 
+			                 `;
+
+            }).join('')}
+			 
+			         
+															</div>
+			 
+			     `;
+            sidebar.appendChild(section);
+        });
+        // Accordion toggle
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+        // Toggle switch functionality
+        document.querySelectorAll('input[type="checkbox"]').forEach(toggle => {
+            toggle.addEventListener('change', (e) => {
+                const feature = e.target.dataset.feature;
+                const settingsPanel = document.getElementById('uniform-settings');
+                const inappropriatePanel = document.getElementById('inappropriate-behavior-settings');
+                const explosionPanel = document.getElementById('explosion-detection-settings');
+                const commotionPanel = document.getElementById('commotion-detection-settings');
+                if (e.target.checked) {
+                    if (feature === 'uniform-check' && settingsPanel) {
+                        settingsPanel.style.display = 'flex';
+                    }
+                    if (feature === 'inappropriate-behavior-detection' && inappropriatePanel) {
+                        inappropriatePanel.style.display = 'flex';
+                    }
+                    if (feature === 'explosion-detection' && explosionPanel) {
+                        explosionPanel.style.display = 'flex';
+                    }
+                    if (feature === 'commotion-detection' && commotionPanel) {
+                        commotionPanel.style.display = 'flex';
+                    }
+                    intervals[feature] = setInterval(() => {
+                        const time = new Date().toLocaleTimeString();
+                        addLogEntry(`Alert: ${feature.replace(/-/g, ' ')} detected`, feature, time);
+                    }, 3000 + Math.random() * 5000);
+                } else {
+                    clearInterval(intervals[feature]);
+                    if (feature === 'uniform-check' && settingsPanel) {
+                        settingsPanel.style.display = 'none';
+                    }
+                    if (feature === 'inappropriate-behavior-detection' && inappropriatePanel) {
+                        inappropriatePanel.style.display = 'none';
+                    }
+                    if (feature === 'explosion-detection' && explosionPanel) {
+                        explosionPanel.style.display = 'none';
+                    }
+                    if (feature === 'commotion-detection' && commotionPanel) {
+                        commotionPanel.style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        function addLogEntry(message, feature, timestamp) {
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.dataset.feature = feature;
+            const textSpan = document.createElement('span');
+            textSpan.className = 'log-entry-text';
+            textSpan.textContent = `[${timestamp}] ${message}`;
+            entry.appendChild(textSpan);
+            const screenshotBtn = document.createElement('button');
+            screenshotBtn.className = 'view-screenshot';
+            screenshotBtn.textContent = 'View Screenshot';
+            screenshotBtn.onclick = () => openScreenshotModal(feature, timestamp);
+            entry.appendChild(screenshotBtn);
+            logPanel.insertBefore(entry, logPanel.firstChild);
+            // Store log for filtering
+            allLogs.push({
+                element: entry,
+                feature: feature,
+                timestamp: timestamp,
+                message: message
+            });
+            // Add special handling for high-priority alerts
+            if (message.includes('explosion') || message.includes('commotion') || message.includes('inappropriate behavior') || message.includes('weapon') || message.includes('panic')) {
+                textSpan.style.color = '#ff4d4d';
+                textSpan.style.fontWeight = 'bold';
+                // Play alert sound (would need to be implemented with actual audio)
+                // playAlertSound();
+            }
+        }
+        // Settings modal functions
+        function openSettingsModal() {
+            document.getElementById('settingsModal').style.display = 'block';
+        }
+
+        function closeSettingsModal() {
+            document.getElementById('settingsModal').style.display = 'none';
+        }
+
+        function saveLogSettings() {
+            const logFolder = document.getElementById('logFolder').value;
+            const logName = document.getElementById('logName').value;
+            if (logFolder && logName) {
+                alert(`Logs will be saved to: ${logFolder}/${logName}.log`);
+                closeSettingsModal();
+            } else {
+                alert('Please provide both folder path and log name.');
+            }
+        }
+        // Add event listener for filter change
+        filterSelect.addEventListener('change', filterLogs);
+        // Initialize
+        function initialize() {
+            initializeMobileView();
+            populateFilterOptions();
+            // Add some initial log entries for demonstration
+            const demoFeatures = ['uniform-check', 'mask-detection', 'weapon-like-object', 'explosion-detection'];
+            const now = new Date();
+            demoFeatures.forEach((feature, index) => {
+                const time = new Date(now.getTime() - (index * 60000)).toLocaleTimeString();
+                addLogEntry(`Alert: ${feature.replace(/-/g, ' ')} detected`, feature, time);
+            });
+        }
+        // Initialize on page load
+        window.addEventListener('load', initialize);
+        // Handle window resize
+        window.addEventListener('resize', initializeMobileView);
+    </script>
+</body>
+
+</html>
