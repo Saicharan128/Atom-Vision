@@ -396,3 +396,443 @@
 {"timestamp": "2025-05-09 17:02:28", "feature": "mask-detection", "confidence": 0.67, "mask_detected": "false", "weapon_detected": "none", "fire_smoke_detected": "none"}
 {"timestamp": "2025-05-09 17:02:31", "feature": "weapon-like-object", "confidence": 0.91, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
 {"timestamp": "2025-05-09 17:02:31", "feature": "weapon-like-object", "confidence": 0.9, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:42", "feature": "mask-detection", "confidence": 0.62, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:45", "feature": "mask-detection", "confidence": 0.72, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:46", "feature": "mask-detection", "confidence": 0.62, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:50", "feature": "mask-detection", "confidence": 0.88, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:53", "feature": "mask-detection", "confidence": 0.71, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:57", "feature": "mask-detection", "confidence": 0.96, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:57", "feature": "mask-detection", "confidence": 0.82, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:14:59", "feature": "mask-detection", "confidence": 0.97, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:02", "feature": "mask-detection", "confidence": 0.85, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:04", "feature": "mask-detection", "confidence": 0.59, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:08", "feature": "mask-detection", "confidence": 0.81, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:13", "feature": "mask-detection", "confidence": 0.99, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:16", "feature": "mask-detection", "confidence": 0.52, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:27", "feature": "weapon-like-object", "confidence": 0.68, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:29", "feature": "weapon-like-object", "confidence": 0.71, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:30", "feature": "weapon-like-object", "confidence": 0.72, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:33", "feature": "weapon-like-object", "confidence": 0.56, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:35", "feature": "weapon-like-object", "confidence": 0.88, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:36", "feature": "weapon-like-object", "confidence": 0.99, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:37", "feature": "weapon-like-object", "confidence": 0.73, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:39", "feature": "weapon-like-object", "confidence": 0.62, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:39", "feature": "weapon-like-object", "confidence": 0.51, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:42", "feature": "weapon-like-object", "confidence": 0.84, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:44", "feature": "weapon-like-object", "confidence": 0.8, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:45", "feature": "weapon-like-object", "confidence": 1.0, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:47", "feature": "weapon-like-object", "confidence": 0.53, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:48", "feature": "weapon-like-object", "confidence": 0.67, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:48", "feature": "weapon-like-object", "confidence": 0.72, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:50", "feature": "weapon-like-object", "confidence": 0.82, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:54", "feature": "weapon-like-object", "confidence": 0.94, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:55", "feature": "weapon-like-object", "confidence": 0.64, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:57", "feature": "weapon-like-object", "confidence": 0.61, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:15:59", "feature": "weapon-like-object", "confidence": 0.84, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:16:00", "feature": "weapon-like-object", "confidence": 0.52, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:16:01", "feature": "weapon-like-object", "confidence": 0.81, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:16:02", "feature": "weapon-like-object", "confidence": 0.67, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:16:03", "feature": "weapon-like-object", "confidence": 0.94, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:16:05", "feature": "weapon-like-object", "confidence": 0.57, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:16:06", "feature": "weapon-like-object", "confidence": 0.56, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 17:16:07", "feature": "weapon-like-object", "confidence": 0.51, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-09 18:36:10", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:10", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:11", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:12", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:13", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:14", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:15", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:16", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:17", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:18", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:19", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:20", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:21", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:22", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:22", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-09 18:36:22", "feature": "mask-detection", "confidence": 0.0, "status": "Not detected", "mask_detected": "false"}
+{"timestamp": "2025-05-12 22:34:22", "feature": "fire-smoke-detection", "confidence": 0.2902756929397583, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-12 22:34:29", "feature": "mask-detection", "confidence": 0.3190080523490906, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:33", "feature": "mask-detection", "confidence": 0.38482341170310974, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:34", "feature": "mask-detection", "confidence": 0.49935686588287354, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:35", "feature": "mask-detection", "confidence": 0.7657226920127869, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:36", "feature": "mask-detection", "confidence": 0.48848167061805725, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:37", "feature": "mask-detection", "confidence": 0.36505579948425293, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:38", "feature": "mask-detection", "confidence": 0.33586588501930237, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:39", "feature": "mask-detection", "confidence": 0.32752135396003723, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:40", "feature": "mask-detection", "confidence": 0.6600345969200134, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:41", "feature": "mask-detection", "confidence": 0.3843255937099457, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:41", "feature": "mask-detection", "confidence": 0.4956643879413605, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:42", "feature": "mask-detection", "confidence": 0.26908057928085327, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:43", "feature": "mask-detection", "confidence": 0.37341994047164917, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:34:46", "feature": "mask-detection", "confidence": 0.8276376128196716, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:35:28", "feature": "weapon-like-object", "confidence": 0.8528485298156738, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:35:29", "feature": "weapon-like-object", "confidence": 0.8099119663238525, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:35:30", "feature": "weapon-like-object", "confidence": 0.8598183393478394, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:35:31", "feature": "weapon-like-object", "confidence": 0.8859040141105652, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-12 22:35:33", "feature": "weapon-like-object", "confidence": 0.8811820149421692, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:30", "feature": "mask-detection", "confidence": 0.5725784301757812, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:30", "feature": "mask-detection", "confidence": 0.7225069999694824, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:30", "feature": "mask-detection", "confidence": 0.7199458479881287, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:30", "feature": "mask-detection", "confidence": 0.27562546730041504, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:31", "feature": "mask-detection", "confidence": 0.42147043347358704, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:31", "feature": "mask-detection", "confidence": 0.6321958303451538, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:32", "feature": "mask-detection", "confidence": 0.4999403953552246, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:34", "feature": "mask-detection", "confidence": 0.33085429668426514, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:35", "feature": "mask-detection", "confidence": 0.8858480453491211, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:35", "feature": "mask-detection", "confidence": 0.7976283431053162, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:36", "feature": "mask-detection", "confidence": 0.8673420548439026, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:36", "feature": "mask-detection", "confidence": 0.7801884412765503, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:36", "feature": "mask-detection", "confidence": 0.4535207450389862, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:37", "feature": "mask-detection", "confidence": 0.41490301489830017, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:43", "feature": "weapon-like-object", "confidence": 0.696526825428009, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:17:46", "feature": "weapon-like-object", "confidence": 0.4574580192565918, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:18:26", "feature": "fire-smoke-detection", "confidence": 0.41688984632492065, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:19:12", "feature": "fire-smoke-detection", "confidence": 0.36419677734375, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:19:15", "feature": "fire-smoke-detection", "confidence": 0.3335803747177124, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:19:15", "feature": "fire-smoke-detection", "confidence": 0.29482725262641907, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:19:16", "feature": "fire-smoke-detection", "confidence": 0.303409218788147, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:01", "feature": "weapon-like-object", "confidence": 0.5910058617591858, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:02", "feature": "weapon-like-object", "confidence": 0.7702665328979492, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:03", "feature": "weapon-like-object", "confidence": 0.7836224436759949, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:04", "feature": "weapon-like-object", "confidence": 0.8535972833633423, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:05", "feature": "weapon-like-object", "confidence": 0.8809193968772888, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:05", "feature": "weapon-like-object", "confidence": 0.8971743583679199, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:06", "feature": "weapon-like-object", "confidence": 0.8785164952278137, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:07", "feature": "weapon-like-object", "confidence": 0.8830453753471375, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:08", "feature": "weapon-like-object", "confidence": 0.8246843218803406, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:09", "feature": "weapon-like-object", "confidence": 0.8559966683387756, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:10", "feature": "weapon-like-object", "confidence": 0.8047892451286316, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:12", "feature": "weapon-like-object", "confidence": 0.8968212604522705, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:13", "feature": "weapon-like-object", "confidence": 0.8631842136383057, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:14", "feature": "weapon-like-object", "confidence": 0.6797531843185425, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:15", "feature": "fire-smoke-detection", "confidence": 0.7611309289932251, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:16", "feature": "weapon-like-object", "confidence": 0.7054142355918884, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:17", "feature": "weapon-like-object", "confidence": 0.7768590450286865, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:17", "feature": "weapon-like-object", "confidence": 0.8098474740982056, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:18", "feature": "weapon-like-object", "confidence": 0.7622960209846497, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:19", "feature": "weapon-like-object", "confidence": 0.46632030606269836, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:21", "feature": "weapon-like-object", "confidence": 0.35325321555137634, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:22", "feature": "weapon-like-object", "confidence": 0.4567192494869232, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:22", "feature": "weapon-like-object", "confidence": 0.5576003789901733, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:23", "feature": "weapon-like-object", "confidence": 0.3597297966480255, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:24", "feature": "weapon-like-object", "confidence": 0.38078007102012634, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:25", "feature": "weapon-like-object", "confidence": 0.3866831362247467, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:26", "feature": "weapon-like-object", "confidence": 0.37637561559677124, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 01:20:26", "feature": "fire-smoke-detection", "confidence": 0.7611274719238281, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:27", "feature": "fire-smoke-detection", "confidence": 0.6840934157371521, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:27", "feature": "fire-smoke-detection", "confidence": 0.6564003825187683, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:29", "feature": "fire-smoke-detection", "confidence": 0.8396599888801575, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:29", "feature": "fire-smoke-detection", "confidence": 0.7960860133171082, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:30", "feature": "fire-smoke-detection", "confidence": 0.76226407289505, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:30", "feature": "fire-smoke-detection", "confidence": 0.8613021373748779, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:31", "feature": "fire-smoke-detection", "confidence": 0.7846795320510864, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:31", "feature": "fire-smoke-detection", "confidence": 0.8561349511146545, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:31", "feature": "fire-smoke-detection", "confidence": 0.7988908290863037, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:32", "feature": "fire-smoke-detection", "confidence": 0.6859932541847229, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 01:20:32", "feature": "fire-smoke-detection", "confidence": 0.8008140325546265, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 14:53:18", "feature": "mask-detection", "confidence": 0.8762072324752808, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:18", "feature": "mask-detection", "confidence": 0.8429201245307922, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:18", "feature": "mask-detection", "confidence": 0.8808634281158447, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:18", "feature": "mask-detection", "confidence": 0.8399120569229126, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:18", "feature": "mask-detection", "confidence": 0.8931086659431458, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:19", "feature": "mask-detection", "confidence": 0.9230267405509949, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:19", "feature": "mask-detection", "confidence": 0.907402515411377, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:19", "feature": "mask-detection", "confidence": 0.8786929845809937, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:19", "feature": "mask-detection", "confidence": 0.8299257159233093, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:20", "feature": "mask-detection", "confidence": 0.6726056337356567, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:20", "feature": "mask-detection", "confidence": 0.8626900315284729, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:21", "feature": "mask-detection", "confidence": 0.9208440184593201, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:21", "feature": "mask-detection", "confidence": 0.5878697633743286, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:22", "feature": "mask-detection", "confidence": 0.8679183721542358, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:22", "feature": "mask-detection", "confidence": 0.765082597732544, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:23", "feature": "mask-detection", "confidence": 0.8904078602790833, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:23", "feature": "mask-detection", "confidence": 0.5042365789413452, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:23", "feature": "mask-detection", "confidence": 0.8092206716537476, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:24", "feature": "mask-detection", "confidence": 0.3088477849960327, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:24", "feature": "mask-detection", "confidence": 0.8085808157920837, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:25", "feature": "mask-detection", "confidence": 0.8206563591957092, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:25", "feature": "mask-detection", "confidence": 0.8789435029029846, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:26", "feature": "mask-detection", "confidence": 0.903164267539978, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:26", "feature": "mask-detection", "confidence": 0.7095553874969482, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:26", "feature": "mask-detection", "confidence": 0.8929560780525208, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:27", "feature": "mask-detection", "confidence": 0.891055703163147, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:27", "feature": "mask-detection", "confidence": 0.8220025300979614, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:28", "feature": "mask-detection", "confidence": 0.7818416357040405, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:28", "feature": "mask-detection", "confidence": 0.4270963668823242, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:28", "feature": "mask-detection", "confidence": 0.8971909284591675, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:29", "feature": "mask-detection", "confidence": 0.36176565289497375, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:29", "feature": "mask-detection", "confidence": 0.8995761871337891, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:30", "feature": "mask-detection", "confidence": 0.8507448434829712, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:32", "feature": "mask-detection", "confidence": 0.4408606290817261, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:33", "feature": "mask-detection", "confidence": 0.8298811316490173, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:34", "feature": "mask-detection", "confidence": 0.5826188325881958, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:34", "feature": "mask-detection", "confidence": 0.630487859249115, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:35", "feature": "mask-detection", "confidence": 0.8921173214912415, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:36", "feature": "mask-detection", "confidence": 0.8211430907249451, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:36", "feature": "mask-detection", "confidence": 0.802851140499115, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:36", "feature": "mask-detection", "confidence": 0.8757350444793701, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:37", "feature": "mask-detection", "confidence": 0.5735321640968323, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:38", "feature": "mask-detection", "confidence": 0.2547050714492798, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:40", "feature": "mask-detection", "confidence": 0.26239684224128723, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:42", "feature": "mask-detection", "confidence": 0.32606077194213867, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:44", "feature": "mask-detection", "confidence": 0.7879299521446228, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:44", "feature": "mask-detection", "confidence": 0.2526005804538727, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:45", "feature": "mask-detection", "confidence": 0.48450034856796265, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:46", "feature": "mask-detection", "confidence": 0.6286796927452087, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:46", "feature": "mask-detection", "confidence": 0.39009660482406616, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:47", "feature": "mask-detection", "confidence": 0.8437614440917969, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:47", "feature": "mask-detection", "confidence": 0.6368595361709595, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:48", "feature": "mask-detection", "confidence": 0.7522795796394348, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:48", "feature": "mask-detection", "confidence": 0.7790583372116089, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:49", "feature": "mask-detection", "confidence": 0.8438272476196289, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:49", "feature": "mask-detection", "confidence": 0.5049977898597717, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:50", "feature": "mask-detection", "confidence": 0.640053391456604, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:50", "feature": "mask-detection", "confidence": 0.868177056312561, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:51", "feature": "mask-detection", "confidence": 0.6202152967453003, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:51", "feature": "mask-detection", "confidence": 0.2535420358181, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:52", "feature": "mask-detection", "confidence": 0.30068403482437134, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:52", "feature": "mask-detection", "confidence": 0.8439871668815613, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:53", "feature": "mask-detection", "confidence": 0.4743187129497528, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:53", "feature": "mask-detection", "confidence": 0.6552438139915466, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:53", "feature": "mask-detection", "confidence": 0.7210914492607117, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:54", "feature": "mask-detection", "confidence": 0.5765070915222168, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:54", "feature": "mask-detection", "confidence": 0.8362947702407837, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:55", "feature": "mask-detection", "confidence": 0.5422576069831848, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:55", "feature": "mask-detection", "confidence": 0.442065566778183, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:56", "feature": "mask-detection", "confidence": 0.6635760068893433, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:56", "feature": "mask-detection", "confidence": 0.8802698254585266, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:57", "feature": "mask-detection", "confidence": 0.8751890063285828, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:57", "feature": "mask-detection", "confidence": 0.8007425665855408, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:58", "feature": "mask-detection", "confidence": 0.8500033020973206, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:58", "feature": "mask-detection", "confidence": 0.8874388337135315, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:58", "feature": "mask-detection", "confidence": 0.46846479177474976, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:59", "feature": "mask-detection", "confidence": 0.8231289386749268, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:53:59", "feature": "mask-detection", "confidence": 0.7579693794250488, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:00", "feature": "mask-detection", "confidence": 0.9013811349868774, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:00", "feature": "mask-detection", "confidence": 0.9172539114952087, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:01", "feature": "mask-detection", "confidence": 0.8759708404541016, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:01", "feature": "mask-detection", "confidence": 0.9349355101585388, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:01", "feature": "mask-detection", "confidence": 0.9100289940834045, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:02", "feature": "mask-detection", "confidence": 0.9078057408332825, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:02", "feature": "mask-detection", "confidence": 0.8951948881149292, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:03", "feature": "mask-detection", "confidence": 0.8945780992507935, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:03", "feature": "mask-detection", "confidence": 0.8917437195777893, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:03", "feature": "mask-detection", "confidence": 0.8465174436569214, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:04", "feature": "mask-detection", "confidence": 0.7191084027290344, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:34", "feature": "mask-detection", "confidence": 0.8930543661117554, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:34", "feature": "mask-detection", "confidence": 0.88201904296875, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:34", "feature": "mask-detection", "confidence": 0.8341596722602844, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:35", "feature": "mask-detection", "confidence": 0.8757320046424866, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:35", "feature": "mask-detection", "confidence": 0.7864617109298706, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:35", "feature": "mask-detection", "confidence": 0.8612130880355835, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:36", "feature": "mask-detection", "confidence": 0.7700656652450562, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:36", "feature": "mask-detection", "confidence": 0.8919373154640198, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:37", "feature": "mask-detection", "confidence": 0.8557738065719604, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:37", "feature": "mask-detection", "confidence": 0.7886362671852112, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:37", "feature": "mask-detection", "confidence": 0.927899956703186, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:38", "feature": "mask-detection", "confidence": 0.9018791317939758, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:38", "feature": "mask-detection", "confidence": 0.9104755520820618, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:39", "feature": "mask-detection", "confidence": 0.8702681064605713, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:39", "feature": "mask-detection", "confidence": 0.9116095304489136, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:40", "feature": "mask-detection", "confidence": 0.9098302721977234, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:40", "feature": "mask-detection", "confidence": 0.8973502516746521, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:40", "feature": "mask-detection", "confidence": 0.8703944683074951, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:41", "feature": "mask-detection", "confidence": 0.8557666540145874, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:41", "feature": "mask-detection", "confidence": 0.7676255106925964, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:42", "feature": "mask-detection", "confidence": 0.8671060800552368, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:42", "feature": "mask-detection", "confidence": 0.7514921426773071, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:42", "feature": "mask-detection", "confidence": 0.9054381251335144, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:43", "feature": "mask-detection", "confidence": 0.8354113698005676, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:43", "feature": "mask-detection", "confidence": 0.7083892822265625, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:44", "feature": "mask-detection", "confidence": 0.9019799828529358, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:44", "feature": "mask-detection", "confidence": 0.8634354472160339, "mask_detected": "true", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:52", "feature": "weapon-like-object", "confidence": 0.3374263048171997, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:53", "feature": "weapon-like-object", "confidence": 0.3915727138519287, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:53", "feature": "weapon-like-object", "confidence": 0.3273591101169586, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:54", "feature": "weapon-like-object", "confidence": 0.42919081449508667, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:54", "feature": "weapon-like-object", "confidence": 0.5229188203811646, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:55", "feature": "weapon-like-object", "confidence": 0.36727461218833923, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:55", "feature": "weapon-like-object", "confidence": 0.26229268312454224, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:56", "feature": "weapon-like-object", "confidence": 0.3324642777442932, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:57", "feature": "weapon-like-object", "confidence": 0.4335317015647888, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:57", "feature": "weapon-like-object", "confidence": 0.316160649061203, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:57", "feature": "weapon-like-object", "confidence": 0.3991314470767975, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:58", "feature": "weapon-like-object", "confidence": 0.5296072959899902, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:58", "feature": "weapon-like-object", "confidence": 0.5082630515098572, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:59", "feature": "weapon-like-object", "confidence": 0.48479217290878296, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:59", "feature": "weapon-like-object", "confidence": 0.5134557485580444, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:54:59", "feature": "weapon-like-object", "confidence": 0.4818597733974457, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:00", "feature": "weapon-like-object", "confidence": 0.49849963188171387, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:00", "feature": "weapon-like-object", "confidence": 0.3956575095653534, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:01", "feature": "weapon-like-object", "confidence": 0.560201108455658, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:01", "feature": "weapon-like-object", "confidence": 0.5545547008514404, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:02", "feature": "weapon-like-object", "confidence": 0.6232868432998657, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:02", "feature": "weapon-like-object", "confidence": 0.5945595502853394, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:15", "feature": "crowd-density-zone", "confidence": 0.58, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 14:55:17", "feature": "crowd-density-zone", "confidence": 0.8, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 19:59:44", "feature": "fire-smoke-detection", "confidence": 0.5666308999061584, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:01:18", "feature": "fire-smoke-detection", "confidence": 0.36611440777778625, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:04:11", "feature": "fire-smoke-detection", "confidence": 0.488077312707901, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:04:48", "feature": "fire-smoke-detection", "confidence": 0.7911759614944458, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:04:49", "feature": "fire-smoke-detection", "confidence": 0.3236801326274872, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:06:07", "feature": "weapon-like-object", "confidence": 0.7491705417633057, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:08", "feature": "weapon-like-object", "confidence": 0.674384355545044, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:09", "feature": "weapon-like-object", "confidence": 0.39511093497276306, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:10", "feature": "weapon-like-object", "confidence": 0.4284875988960266, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:11", "feature": "weapon-like-object", "confidence": 0.45530951023101807, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:11", "feature": "weapon-like-object", "confidence": 0.30706554651260376, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:14", "feature": "fire-smoke-detection", "confidence": 0.7530612349510193, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:06:14", "feature": "weapon-like-object", "confidence": 0.3197363018989563, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:16", "feature": "weapon-like-object", "confidence": 0.8030407428741455, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:16", "feature": "fire-smoke-detection", "confidence": 0.7399246692657471, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:06:17", "feature": "weapon-like-object", "confidence": 0.6748953461647034, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:17", "feature": "fire-smoke-detection", "confidence": 0.6072272062301636, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:06:18", "feature": "weapon-like-object", "confidence": 0.7726120948791504, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:18", "feature": "fire-smoke-detection", "confidence": 0.6993588209152222, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:06:19", "feature": "weapon-like-object", "confidence": 0.7839645743370056, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:19", "feature": "fire-smoke-detection", "confidence": 0.6334769129753113, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:06:19", "feature": "weapon-like-object", "confidence": 0.3740362524986267, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:20", "feature": "fire-smoke-detection", "confidence": 0.40774306654930115, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:06:36", "feature": "weapon-like-object", "confidence": 0.38702982664108276, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:39", "feature": "weapon-like-object", "confidence": 0.6573333144187927, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:40", "feature": "weapon-like-object", "confidence": 0.7308863997459412, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:40", "feature": "weapon-like-object", "confidence": 0.5530833601951599, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:42", "feature": "weapon-like-object", "confidence": 0.741627037525177, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:43", "feature": "weapon-like-object", "confidence": 0.6568547487258911, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:06:45", "feature": "fire-smoke-detection", "confidence": 0.2632763981819153, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:07:25", "feature": "weapon-like-object", "confidence": 0.6395318508148193, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:26", "feature": "weapon-like-object", "confidence": 0.814189076423645, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:26", "feature": "weapon-like-object", "confidence": 0.801644504070282, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:27", "feature": "weapon-like-object", "confidence": 0.662447452545166, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:28", "feature": "weapon-like-object", "confidence": 0.607476532459259, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:29", "feature": "weapon-like-object", "confidence": 0.6097152829170227, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:30", "feature": "weapon-like-object", "confidence": 0.6958168745040894, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:31", "feature": "weapon-like-object", "confidence": 0.684701144695282, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:31", "feature": "weapon-like-object", "confidence": 0.7981559038162231, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:33", "feature": "fire-smoke-detection", "confidence": 0.43044355511665344, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:07:33", "feature": "weapon-like-object", "confidence": 0.8705253005027771, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:34", "feature": "fire-smoke-detection", "confidence": 0.3828509747982025, "mask_detected": "none", "weapon_detected": "none", "fire_smoke_detected": "true"}
+{"timestamp": "2025-05-13 20:07:43", "feature": "weapon-like-object", "confidence": 0.7814491987228394, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:44", "feature": "weapon-like-object", "confidence": 0.4373968243598938, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:45", "feature": "weapon-like-object", "confidence": 0.663324236869812, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:46", "feature": "weapon-like-object", "confidence": 0.7209599018096924, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:47", "feature": "weapon-like-object", "confidence": 0.5734850764274597, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:48", "feature": "weapon-like-object", "confidence": 0.6821832656860352, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:49", "feature": "weapon-like-object", "confidence": 0.7466315627098083, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:50", "feature": "weapon-like-object", "confidence": 0.2717877924442291, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:55", "feature": "weapon-like-object", "confidence": 0.2745891213417053, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:07:56", "feature": "weapon-like-object", "confidence": 0.27819836139678955, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:01", "feature": "weapon-like-object", "confidence": 0.7657075524330139, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:02", "feature": "weapon-like-object", "confidence": 0.829966127872467, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:03", "feature": "weapon-like-object", "confidence": 0.8729153871536255, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:04", "feature": "weapon-like-object", "confidence": 0.8976883888244629, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:05", "feature": "weapon-like-object", "confidence": 0.8741288185119629, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:05", "feature": "weapon-like-object", "confidence": 0.8799172043800354, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:06", "feature": "weapon-like-object", "confidence": 0.823920488357544, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:07", "feature": "weapon-like-object", "confidence": 0.6513454914093018, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:09", "feature": "weapon-like-object", "confidence": 0.6065801382064819, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:10", "feature": "weapon-like-object", "confidence": 0.8671148419380188, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:11", "feature": "weapon-like-object", "confidence": 0.8471322655677795, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:11", "feature": "weapon-like-object", "confidence": 0.7825033664703369, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:14", "feature": "weapon-like-object", "confidence": 0.44134318828582764, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:15", "feature": "weapon-like-object", "confidence": 0.2871505320072174, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:16", "feature": "weapon-like-object", "confidence": 0.31771954894065857, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:17", "feature": "weapon-like-object", "confidence": 0.3767397999763489, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:18", "feature": "weapon-like-object", "confidence": 0.31518879532814026, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}
+{"timestamp": "2025-05-13 20:08:19", "feature": "weapon-like-object", "confidence": 0.5084996819496155, "mask_detected": "none", "weapon_detected": "true", "fire_smoke_detected": "none"}

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import cv2
 import numpy as np
-import onnxruntime as ort
+from ultralytics import YOLO
 import base64
 from datetime import datetime
 import os
@@ -27,61 +27,53 @@ detection_settings = {}
 log_folder = "logs"
 frame_queue = queue.Queue(maxsize=20)
 frame_skip_counter = 0
-models_available = False
 detector_cycle = None
+yolo_model = None
 
 # Ensure directories exist
 os.makedirs(log_folder, exist_ok=True)
 os.makedirs('static', exist_ok=True)
 
-# Initialize ONNX Runtime sessions
-mask_session = None
-object_session = None
-
-def load_models():
-    global mask_session, object_session, models_available
+# Initialize YOLO model
+def load_yolo_model():
+    global yolo_model
+    model_path = "best.pt"
     try:
-        if not os.path.exists("MaskRCNN-12.onnx"):
-            raise FileNotFoundError("MaskRCNN-12.onnx not found")
-        if not os.path.exists("tinyyolov2-8.onnx"):
-            raise FileNotFoundError("tinyyolov2-8.onnx not found")
-        
-        mask_session = ort.InferenceSession("MaskRCNN-12.onnx")
-        object_session = ort.InferenceSession("tinyyolov2-8.onnx")
-        models_available = True
-        logger.info("Models loaded successfully")
+        if not os.path.exists(model_path):
+            raise FileNotFoundError(f"YOLO model not found at {model_path}")
+        yolo_model = YOLO(model_path)
+        yolo_model.to('cpu')  # Ensure CPU inference
+        logger.info("YOLO model loaded successfully")
         return True
-    except FileNotFoundError as e:
-        logger.error(f"Model file error: {str(e)}")
-        return False
     except Exception as e:
-        logger.error(f"Error loading models: {str(e)}")
+        logger.error(f"Error loading YOLO model: {str(e)}")
         return False
 
 # Feature to model mapping
 feature_to_model = {
-    'mask-detection': {'model': 'mask', 'function': 'detect_mask'},
-    'weapon-like-object': {'model': 'object', 'function': 'detect_weapon'},
-    'fire-smoke-detection': {'model': 'object', 'function': 'detect_fire_smoke'},
-    'uniform-check': {'model': 'object', 'function': 'detect_uniform'},
-    'apron-detection': {'model': 'object', 'function': 'detect_apron'},
-    'id-badge-visibility': {'model': 'object', 'function': 'detect_id_badge'},
-    'shoe-cover-check': {'model': 'object', 'function': 'detect_shoe_cover'},
-    'loitering-detection': {'model': 'object', 'function': 'detect_loitering'},
-    'unusual-movement': {'model': 'object', 'function': 'detect_unusual_movement'},
-    'object-left-behind': {'model': 'object', 'function': 'detect_abandoned_object'},
-    'face-not-recognized': {'model': 'mask', 'function': 'detect_unrecognized_face'},
-    'perimeter-breach-detection': {'model': 'object', 'function': 'detect_perimeter_breach'},
-    'crowd-density-zone': {'model': 'object', 'function': 'detect_crowd_density'},
-    'queue-detection': {'model': 'object', 'function': 'detect_queue'},
-    'aggressive-posture': {'model': 'object', 'function': 'detect_aggressive_posture'},
-    'falling-detection': {'model': 'object', 'function': 'detect_falling'},
-    'lights-off-detection': {'model': 'object', 'function': 'detect_lights_off'},
-    'door-open-close-monitor': {'model': 'object', 'function': 'detect_door_status'},
-    'explosion-detection': {'model': 'object', 'function': 'detect_explosion'},
-    'commotion-detection': {'model': 'object', 'function': 'detect_commotion'},
-    'inappropriate-behavior-detection': {'model': 'object', 'function': 'detect_inappropriate_behavior'},
-    'panic-behavior-detection': {'model': 'object', 'function': 'detect_panic'}
+    'mask-detection': {'class_id': 1, 'function': 'detect_yolo'},
+    'weapon-like-object': {'class_id': 2, 'function': 'detect_yolo'},
+    'fire-smoke-detection': {'class_id': 0, 'function': 'detect_yolo'},
+    # Other features (not supported by YOLO model, using simulation)
+    'uniform-check': {'function': 'detect_simulation'},
+    'apron-detection': {'function': 'detect_simulation'},
+    'id-badge-visibility': {'function': 'detect_simulation'},
+    'shoe-cover-check': {'function': 'detect_simulation'},
+    'loitering-detection': {'function': 'detect_simulation'},
+    'unusual-movement': {'function': 'detect_simulation'},
+    'object-left-behind': {'function': 'detect_simulation'},
+    'face-not-recognized': {'function': 'detect_simulation'},
+    'perimeter-breach-detection': {'function': 'detect_simulation'},
+    'crowd-density-zone': {'function': 'detect_simulation'},
+    'queue-detection': {'function': 'detect_simulation'},
+    'aggressive-posture': {'function': 'detect_simulation'},
+    'falling-detection': {'function': 'detect_simulation'},
+    'lights-off-detection': {'function': 'detect_simulation'},
+    'door-open-close-monitor': {'function': 'detect_simulation'},
+    'explosion-detection': {'function': 'detect_simulation'},
+    'commotion-detection': {'function': 'detect_simulation'},
+    'inappropriate-behavior-detection': {'function': 'detect_simulation'},
+    'panic-behavior-detection': {'function': 'detect_simulation'}
 }
 
 def decode_frame(base64_string):
@@ -98,203 +90,65 @@ def decode_frame(base64_string):
         logger.error(f"Error decoding frame: {str(e)}")
         return None
 
-def preprocess_frame(frame, target_size=(416, 416)):
-    try:
-        img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        img = cv2.resize(img, target_size)
-        img_data = np.transpose(img, (2, 0, 1)).astype(np.float32) / 255.0
-        img_data = np.expand_dims(img_data, axis=0)
-        return img_data
-    except Exception as e:
-        logger.error(f"Error preprocessing frame: {str(e)}")
-        return None
-
-def detect_mask(frame, settings=None):
-    if frame is None:
+def detect_yolo(frame, settings=None, feature=None):
+    if frame is None or yolo_model is None:
         return frame, []
     
     detections = []
     try:
-        if models_available and mask_session is not None:
-            img_data = preprocess_frame(frame, target_size=(640, 480))
-            if img_data is None:
-                raise ValueError("Failed to preprocess frame")
-            
-            input_name = mask_session.get_inputs()[0].name
-            outputs = mask_session.run(None, {input_name: img_data})
-            
-            if outputs and np.random.random() < 0.3:
-                detection_info = {
-                    'type': 'mask-detection',
-                    'confidence': round(np.random.random() * 0.5 + 0.5, 2),
-                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    'bbox': [100, 100, 200, 200],
-                    'mask_detected': np.random.choice([True, False])
-                }
-                detections.append(detection_info)
-        else:
-            logger.warning("Mask detection using simulation mode")
+        # Run YOLO inference
+        results = yolo_model.predict(source=frame, conf=0.25, iou=0.45, save=False, verbose=False)
+        class_id = feature_to_model[feature]['class_id']
+        
+        for result in results:
+            for box in result.boxes:
+                if int(box.cls) == class_id:
+                    x1, y1, x2, y2 = map(int, box.xyxy[0])
+                    detection_info = {
+                        'type': feature,
+                        'confidence': float(box.conf),
+                        'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                        'bbox': [x1, y1, x2, y2]
+                    }
+                    if feature == 'mask-detection':
+                        detection_info['mask_detected'] = True
+                    elif feature == 'weapon-like-object':
+                        detection_info['weapon_detected'] = True
+                    elif feature == 'fire-smoke-detection':
+                        detection_info['fire_smoke_detected'] = True
+                    detections.append(detection_info)
+                    # Draw bounding box
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                    label = f"{feature.replace('-', ' ')}: {box.conf:.2f}"
+                    cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+        
+        logger.debug(f"YOLO detections for {feature}: {len(detections)}")
     except Exception as e:
-        logger.error(f"Error in mask detection: {str(e)}\n{traceback.format_exc()}")
-    
-    if not detections and np.random.random() < 0.3:
-        detection_info = {
-            'type': 'mask-detection',
-            'confidence': round(np.random.random() * 0.5 + 0.5, 2),
-            'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            'bbox': [100, 100, 200, 200],
-            'mask_detected': np.random.choice([True, False])
-        }
-        detections.append(detection_info)
-        logger.debug("Mask detection fallback to simulation")
-    
+        logger.error(f"Error in YOLO detection for {feature}: {str(e)}\n{traceback.format_exc()}")
+
     return frame, detections
 
-def detect_weapon(frame, settings=None):
+def detect_simulation(frame, settings=None, feature=None):
     if frame is None:
         return frame, []
     
     detections = []
-    try:
-        if models_available and object_session is not None:
-            img_data = preprocess_frame(frame)
-            if img_data is None:
-                raise ValueError("Failed to preprocess frame")
-            
-            input_name = object_session.get_inputs()[0].name
-            outputs = object_session.run(None, {input_name: img_data})
-            
-            if outputs and np.random.random() < 0.3:
-                detection_info = {
-                    'type': 'weapon-like-object',
-                    'confidence': round(np.random.random() * 0.5 + 0.5, 2),
-                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    'bbox': [100, 100, 200, 200],
-                    'weapon_detected': np.random.choice([True, False])
-                }
-                detections.append(detection_info)
-        else:
-            logger.warning("Weapon detection using simulation mode")
-    except Exception as e:
-        logger.error(f"Error in weapon detection: {str(e)}\n{traceback.format_exc()}")
-    
-    if not detections and np.random.random() < 0.3:
+    if np.random.random() < 0.3:
         detection_info = {
-            'type': 'weapon-like-object',
-            'confidence': round(np.random.random() * 0.5 + 0.5, 2),
-            'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            'bbox': [100, 100, 200, 200],
-            'weapon_detected': np.random.choice([True, False])
-        }
-        detections.append(detection_info)
-        logger.debug("Weapon detection fallback to simulation")
-    
-    return frame, detections
-
-def detect_fire_smoke(frame, settings=None):
-    if frame is None:
-        return frame, []
-    
-    detections = []
-    try:
-        if models_available and object_session is not None:
-            img_data = preprocess_frame(frame)
-            if img_data is None:
-                raise ValueError("Failed to preprocess frame")
-            
-            input_name = object_session.get_inputs()[0].name
-            outputs = object_session.run(None, {input_name: img_data})
-            
-            if outputs and np.random.random() < 0.3:
-                detection_info = {
-                    'type': 'fire-smoke-detection',
-                    'confidence': round(np.random.random() * 0.5 + 0.5, 2),
-                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    'bbox': [100, 100, 200, 200],
-                    'fire_smoke_detected': np.random.choice([True, False])
-                }
-                detections.append(detection_info)
-        else:
-            logger.warning("Fire/smoke detection using simulation mode")
-    except Exception as e:
-        logger.error(f"Error in fire/smoke detection: {str(e)}\n{traceback.format_exc()}")
-    
-    if not detections and np.random.random() < 0.3:
-        detection_info = {
-            'type': 'fire-smoke-detection',
-            'confidence': round(np.random.random() * 0.5 + 0.5, 2),
-            'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            'bbox': [100, 100, 200, 200],
-            'fire_smoke_detected': np.random.choice([True, False])
-        }
-        detections.append(detection_info)
-        logger.debug("Fire/smoke detection fallback to simulation")
-    
-    return frame, detections
-
-def detect_object(frame, object_type, settings=None):
-    if frame is None:
-        return frame, []
-    
-    detections = []
-    try:
-        if models_available and object_session is not None:
-            img_data = preprocess_frame(frame)
-            if img_data is None:
-                raise ValueError("Failed to preprocess frame")
-            
-            input_name = object_session.get_inputs()[0].name
-            outputs = object_session.run(None, {input_name: img_data})
-            
-            if outputs and np.random.random() < 0.3:
-                detection_info = {
-                    'type': object_type,
-                    'confidence': round(np.random.random() * 0.5 + 0.5, 2),
-                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    'bbox': [100, 100, 200, 200]
-                }
-                detections.append(detection_info)
-        else:
-            logger.warning(f"{object_type} detection using simulation mode")
-    except Exception as e:
-        logger.error(f"Error in object detection ({object_type}): {str(e)}\n{traceback.format_exc()}")
-    
-    if not detections and np.random.random() < 0.3:
-        detection_info = {
-            'type': object_type,
+            'type': feature,
             'confidence': round(np.random.random() * 0.5 + 0.5, 2),
             'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             'bbox': [100, 100, 200, 200]
         }
         detections.append(detection_info)
-        logger.debug(f"{object_type} detection fallback to simulation")
+        logger.debug(f"Simulation detection for {feature}")
     
     return frame, detections
 
 # Map detector functions
 detection_functions = {
-    'detect_mask': detect_mask,
-    'detect_weapon': detect_weapon,
-    'detect_fire_smoke': detect_fire_smoke,
-    'detect_uniform': lambda frame, settings: detect_object(frame, 'uniform-check', settings),
-    'detect_apron': lambda frame, settings: detect_object(frame, 'apron-detection', settings),
-    'detect_id_badge': lambda frame, settings: detect_object(frame, 'id-badge-visibility', settings),
-    'detect_shoe_cover': lambda frame, settings: detect_object(frame, 'shoe-cover-check', settings),
-    'detect_loitering': lambda frame, settings: detect_object(frame, 'loitering-detection', settings),
-    'detect_unusual_movement': lambda frame, settings: detect_object(frame, 'unusual-movement', settings),
-    'detect_abandoned_object': lambda frame, settings: detect_object(frame, 'object-left-behind', settings),
-    'detect_unrecognized_face': lambda frame, settings: detect_object(frame, 'face-not-recognized', settings),
-    'detect_perimeter_breach': lambda frame, settings: detect_object(frame, 'perimeter-breach-detection', settings),
-    'detect_crowd_density': lambda frame, settings: detect_object(frame, 'crowd-density-zone', settings),
-    'detect_queue': lambda frame, settings: detect_object(frame, 'queue-detection', settings),
-    'detect_aggressive_posture': lambda frame, settings: detect_object(frame, 'aggressive-posture', settings),
-    'detect_falling': lambda frame, settings: detect_object(frame, 'falling-detection', settings),
-    'detect_lights_off': lambda frame, settings: detect_object(frame, 'lights-off-detection', settings),
-    'detect_door_status': lambda frame, settings: detect_object(frame, 'door-open-close-monitor', settings),
-    'detect_explosion': lambda frame, settings: detect_object(frame, 'explosion-detection', settings),
-    'detect_commotion': lambda frame, settings: detect_object(frame, 'commotion-detection', settings),
-    'detect_inappropriate_behavior': lambda frame, settings: detect_object(frame, 'inappropriate-behavior-detection', settings),
-    'detect_panic': lambda frame, settings: detect_object(frame, 'panic-behavior-detection', settings)
+    'detect_yolo': detect_yolo,
+    'detect_simulation': detect_simulation
 }
 
 def process_frame_worker():
@@ -333,11 +187,11 @@ def process_frame_worker():
                 
                 if func_name in detection_functions:
                     settings = detection_settings.get(feature, {})
-                    processed_frame, feature_detections = detection_functions[func_name](processed_frame, settings)
+                    processed_frame, feature_detections = detection_functions[func_name](processed_frame, settings, feature)
                     detections.extend(feature_detections)
             
             for detection in detections:
-                # Check for positive detections only
+                # Check for positive detections
                 is_positive = (
                     (detection['type'] == 'mask-detection' and detection.get('mask_detected', False)) or
                     (detection['type'] == 'weapon-like-object' and detection.get('weapon_detected', False)) or
@@ -360,11 +214,11 @@ def process_frame_worker():
                 log_buffer.append(log_entry)
                 
                 if detection['type'] == 'mask-detection':
-                    status = 'Mask' if detection.get('mask_detected', True) else 'No Mask'
+                    status = 'Mask'
                 elif detection['type'] == 'weapon-like-object':
-                    status = 'Weapon' if detection.get('weapon_detected', True) else 'No Weapon'
+                    status = 'Weapon'
                 elif detection['type'] == 'fire-smoke-detection':
-                    status = 'Fire/Smoke' if detection.get('fire_smoke_detected', True) else 'No Fire/Smoke'
+                    status = 'Fire/Smoke'
                 else:
                     status = 'Detected'
                 
@@ -476,6 +330,8 @@ def receive_frame(data):
         logger.error(f"Error queuing frame: {str(e)}")
 
 if __name__ == '__main__':
-    load_models()
-    threading.Thread(target=process_frame_worker, daemon=True).start()
-    socketio.run(app, debug=True, host='0.0.0.0', port=5000)
+    if load_yolo_model():
+        threading.Thread(target=process_frame_worker, daemon=True).start()
+        socketio.run(app, debug=True, host='0.0.0.0', port=5000)
+    else:
+        logger.error("Failed to start server due to model loading failure")

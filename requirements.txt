@@ -1,6 +1,12 @@
+torch
+torchvision
+ultralytics
+pycocotools
+requests
+pillow
 flask
 flask-socketio
-opencv-python
-numpy
 onnxruntime
-python-socketio
+numpy
+opencv-python
+pyyaml
